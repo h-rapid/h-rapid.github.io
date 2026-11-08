@@ -1,1 +1,0 @@
-# h-rapid.github.io
