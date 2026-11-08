@@ -1,12 +1,72 @@
 <!DOCTYPE html>
-<html>
-  <head>
-    <meta name="robots" content="noindex">
-    <meta name="robots" content="nofollow">
-    <meta http-equiv="Content-type" content="text/html; charset=utf-8">
-    <meta http-equiv="Content-Security-Policy" content="default-src 'none'; style-src 'unsafe-inline'; img-src data:; connect-src 'self'">
-    <title></title>
-      <body>
-        index
-      </body>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>アプリ一覧</title>
+<meta name="description" content="公開中のiPhoneアプリ一覧">
+<style>
+  :root { --accent: #3b82f6; --text: #1f2937; --bg: #f9fafb; }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0;
+    font-family: -apple-system, BlinkMacSystemFont, "Hiragino Sans", "Noto Sans JP", sans-serif;
+    color: var(--text);
+    background: var(--bg);
+    line-height: 1.6;
+  }
+  .container { max-width: 720px; margin: 0 auto; padding: 0 20px 64px; }
+  h1 { text-align: center; font-size: 1.8rem; padding: 48px 0 24px; margin: 0; }
+  .apps { list-style: none; padding: 0; margin: 0; display: grid; gap: 12px; }
+  .app {
+    display: flex; align-items: center; gap: 16px;
+    background: #fff; border-radius: 16px; padding: 16px;
+    box-shadow: 0 1px 4px rgba(0,0,0,.06);
+  }
+  .app img { border:1px solid; border-color: #c7c7c7; width: 72px; height: 72px; border-radius: 16px; flex-shrink: 0; }
+  .app .name { font-weight: bold; font-size: 1.1rem; min-width: 8em; }
+  .app .desc { color: #4b5563; font-size: .95rem; }
+  .app a { color: inherit; text-decoration: none; display: contents; }
+  @media (max-width: 520px) {
+    .app { flex-wrap: wrap; }
+    .app .name { min-width: 0; flex: 1; }
+    .app .desc { width: 100%; }
+  }
+</style>
+</head>
+<body>
+<div class="container">
+  <h1>アプリ一覧</h1>
+
+  <ul class="apps">
+    <!-- アイコン | アプリ名 | 概要 -->
+    <li class="app">
+      <a href="https://apps.apple.com/jp/app/%E7%B4%A0%E6%95%B0%E8%A8%98%E5%BF%B5%E6%97%A5/id6825674551" target="_blank">
+        <img src="img/AppIcon-1.png" alt="素数記念日">
+        <span class="name">素数記念日</span>
+        <span class="desc">記念月が素数の月に、プッシュ通知でお祝いする記念日アプリ。</span>
+      </a>
+    </li>
+
+    <li class="app">
+      <a href="#" target="_blank">
+        <img src="img/AppIcon-2.png" alt="じゃんけん参謀">
+        <span class="name">じゃんけん参謀</span>
+        <span class="desc">次に出す手を、アプリが提案。結果を入力するたびに相手の癖を分析して、提案の精度がアップします。</span>
+      </a>
+    </li>
+
+
+    <!-- アプリを追加するときは、下の li をコピーして使う
+    <li class="app">
+      <a href="" target="_blank">
+        <img src="img/AppIcon-.png" alt="アプリ名">
+        <span class="name">アプリ名</span>
+        <span class="desc">概要を入力</span>
+      </a>
+    </li>
+    -->
+  </ul>
+</div>
+</body>
 </html>
